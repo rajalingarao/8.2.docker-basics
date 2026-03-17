@@ -23,7 +23,7 @@
 # ARG TRAINER=LingaRao
 # ARG Duration=120HRS
 # RUN echo "Course is:${COURSE} TRAINER is: ${TRAINER}, Duration is:${Duration}"
-# CMD { "sleep","100" }
+# CMD [ "sleep","100" ]
 
 ARG version
 FROM almalinux:${version:-8}
@@ -32,4 +32,4 @@ ARG TRAINER=LingaRao
 ARG Duration=120HRS
 ENV Duration=${Duration}
 RUN echo "Course is:${COURSE} TRAINER is: ${TRAINER}, Duration is:${Duration}"
-CMD { "sleep","100" }
+CMD [ "sleep","100" ]
